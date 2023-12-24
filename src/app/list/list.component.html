@@ -1,0 +1,17 @@
+<div class="row mt-5">
+    <div class="col-md-3" *ngFor="let hero of app.heros">
+        
+
+        <div [ngClass]="{'card':true, 'high': hero.power > 100, 'low': hero.power < 100 }">
+            <!-- Contenu de la carte -->
+       
+            <div class="card m-1" >
+        
+        <img [src]="hero.image" class="card-img m-1" alt="...">
+        <div class="card-body">
+          <h1 class="card-title">{{ hero.name }}</h1>
+          <p>{{ hero.power }}</p>
+        </div></div>
+      </div>
+    </div>
+</div>

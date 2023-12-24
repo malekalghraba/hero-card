@@ -1,0 +1,17 @@
+.container {
+    background-color: aqua;
+    
+    }
+    .btn{
+    
+        background-color: blueviolet;
+    }
+    .hight{
+     background-color: blueviolet;   
+    }
+    medium{
+        background-color: rgb(43, 226, 226);   
+       }
+       .low{
+        background-color: rgb(226, 80, 43);   
+       }
