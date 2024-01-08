@@ -11,16 +11,5 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
-  Hero: any = {
-  }
-  ; // Object to hold new hero details
-  heroes: any[] = []; // Array to store hero objects
-
-  createHero() {
-    // Push new hero details to the heroes array
-    this.heroes.push(Object.assign({}, this.Hero));
-
-    // Clear input fields after creating a hero
-    this.Hero = {};
-  }
+  
 }

@@ -7,18 +7,21 @@ import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import{HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     AjoutComponent,
-    ListComponent
+    ListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
