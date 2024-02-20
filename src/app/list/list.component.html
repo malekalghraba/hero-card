@@ -1,5 +1,5 @@
 <div class="row mt-5">
-    <div class="col-md-3" *ngFor="let hero of app.heros">
+    <div class="col-md-3" *ngFor="let hero of heros">
         
 
         <div [ngClass]="{'card':true, 'high': hero.power > 100, 'low': hero.power < 100 }">
@@ -11,6 +11,7 @@
         <div class="card-body">
           <h1 class="card-title">{{ hero.name }}</h1>
           <p>{{ hero.power }}</p>
+          <button class="btn btn-danger" type="button" (click)="onDeleteHero(hero._id)">Delete</button>
         </div></div>
       </div>
     </div>

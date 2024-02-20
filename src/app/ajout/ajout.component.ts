@@ -12,14 +12,26 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./ajout.component.css']
 })
 export class AjoutComponent {
-  Hero :any= { }; // Object to hold new hero details
-  
-  createHero() {
-    // Push new hero details to the heroes array
-    this.shared.heros.push(this.Hero);
+  //Hero :any= { }; // Object to hold new hero details
+  hero = {
+    name:'',
+    power:0,
+    image:''
+  }
 
-    // Clear input fields after creating a hero
-    this.Hero = {};
+  createHero() {
+    this.shared.createNewHero(this.hero).subscribe(
+
+      (res)=>{
+        console.log(res);
+      },
+      (err)=>{
+        console.log(err);
+        
+      }
+
+    )
+
   }
   
   constructor( public shared:SharedService){}
