@@ -8,14 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import{HttpClientModule} from '@angular/common/http'
+import{HttpClientModule} from '@angular/common/http';
+import { UpdateComponent } from './update/update.component';
+import { ModifComponent } from './modif/modif.component'
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     AjoutComponent,
     ListComponent,
-    NavbarComponent
+    NavbarComponent,
+    UpdateComponent,
+    ModifComponent
   ],
   imports: [
     BrowserModule,

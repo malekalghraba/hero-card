@@ -1,18 +1,17 @@
 <div class="row mt-5">
-    <div class="col-md-3" *ngFor="let hero of heros">
-        
-
-        <div [ngClass]="{'card':true, 'high': hero.power > 100, 'low': hero.power < 100 }">
-            <!-- Contenu de la carte -->
-       
-            <div class="card m-1" >
-        
-        <img [src]="hero.image" class="card-img m-1" alt="...">
-        <div class="card-body">
-          <h1 class="card-title">{{ hero.name }}</h1>
-          <p>{{ hero.power }}</p>
-          <button class="btn btn-danger" type="button" (click)="onDeleteHero(hero._id)">Delete</button>
-        </div></div>
+  <div class="col-md-3" *ngFor="let hero of heros">
+      <div class="card-wrapper">
+          <div [ngClass]="{'card':true, 'high': hero.power > 100, 'low': hero.power < 100}" class="custom-card">
+              <img [src]="hero.image" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{ hero.name }}</h5>
+                  <p class="card-text">Power: {{ hero.power }}</p>
+                 
+                      <button class="btn btn-danger" (click)="onDeleteHero(hero._id)">Delete</button>
+                      <button class="btn btn-info" [routerLink]="['/modif',hero._id]">Update</button>
+                 
+              </div>
+          </div>
       </div>
-    </div>
+  </div>
 </div>

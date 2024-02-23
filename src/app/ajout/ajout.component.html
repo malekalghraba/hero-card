@@ -1,14 +1,21 @@
 <div class="row m-5">
-    <div class="col-md-3">
-      <input type="text" class="form-control m-1" placeholder="hero name" [(ngModel)]="hero.name">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control m-1" placeholder="power" [(ngModel)]="hero.power">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control m-1" placeholder="image" [(ngModel)]="hero.image">
-    </div>
-    <div class="col-md-3">
-      <button type="button" class="btn form-control m-1" (click)="createHero()">Create</button>
-    </div>
+  <div class="col-md-3">
+      <label for="heroName">Hero Name:</label>
+      <input type="text" id="heroName" class="form-control m-1" placeholder="Enter hero name" [(ngModel)]="hero.name">
   </div>
+  <div class="col-md-3">
+      <label for="heroPower">Power:</label>
+      <input type="text" id="heroPower" class="form-control m-1" placeholder="Enter power" [(ngModel)]="hero.power">
+  </div>
+  <div class="col-md-3">
+      <label for="heroImage">Image URL:</label>
+      <div class="input-group">
+        <input type="text" id="heroImage" class="form-control m-1" placeholder="Enter image URL" [(ngModel)]="hero.image">
+
+        </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+      <button type="button" class="btn btn-primary form-control m-1" (click)="createHero()">Create</button>
+  </div>
+
